@@ -1,0 +1,22 @@
+name: Collect Pecos watershed research history
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download historical river and weather records
+        run: python scripts/collect_history.py --start 2022-01-01 --end 2025-12-31 --out research_data
+      - name: Upload research files for analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: pecos-watershed-history-2022-2025
+          path: research_data/
+          retention-days: 30
