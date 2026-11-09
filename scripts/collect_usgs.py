@@ -46,7 +46,7 @@ def parse(payload):
                     value = float(item["value"])
                 except (KeyError, TypeError, ValueError):
                     continue
-                if value &lt; 0:
+                    if value < 0:
                     continue
                 stamp = timestamp.isoformat().replace("+00:00", "Z")
                 observations[site][code][stamp] = value
@@ -58,7 +58,7 @@ def main():
 
     dalton = observations[STATIONS["dalton"]].get("00060", {})
     mora = observations[STATIONS["rio_mora"]].get("00060", {})
-    matched = sorted(set(dalton) &amp; set(mora))
+    matched = sorted(set(dalton) & set(mora))
 
     if not matched:
         raise RuntimeError("No synchronized discharge observations found.")
@@ -66,7 +66,7 @@ def main():
     latest_time = datetime.fromisoformat(matched[-1].replace("Z", "+00:00"))
     age_minutes = (retrieved_at - latest_time).total_seconds() / 60
 
-    if not (-10 &lt;= age_minutes &lt;= 180):
+    if not (-10 <= age_minutes <= 180):
         raise RuntimeError(
             f"Latest matched observations are stale: {age_minutes:.0f} minutes old."
         )
