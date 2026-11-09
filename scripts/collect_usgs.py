@@ -44,9 +44,9 @@ def parse(payload):
                         item["dateTime"].replace("Z", "+00:00")
                     ).astimezone(timezone.utc)
                     value = float(item["value"])
-                except (KeyError, TypeError, ValueError):
+                 except (KeyError, TypeError, ValueError):
                     continue
-                    if value < 0:
+                 if value < 0:
                     continue
                 stamp = timestamp.isoformat().replace("+00:00", "Z")
                 observations[site][code][stamp] = value
