@@ -20,7 +20,7 @@ def fetch():
         "format": "json",
         "sites": ",".join(STATIONS.values()),
         "parameterCd": ",".join(PARAMETERS),
-        "period": "P2D",
+        "period": "P7D",
         "siteStatus": "all",
     })
     request = urllib.request.Request(
