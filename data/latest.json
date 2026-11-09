@@ -1,9 +1,9 @@
 {
   "source": "Official USGS instantaneous values",
-  "retrieved_at_utc": "2026-11-09T19:39:19.861008+00:00",
+  "retrieved_at_utc": "2026-11-09T19:39:54.345299+00:00",
   "latest_matched_at_utc": "2026-11-09T19:00:00Z",
   "latest_matched_at_mountain": "2026-11-09T12:00:00-07:00",
-  "matched_age_minutes": 39.3,
+  "matched_age_minutes": 39.9,
   "latest": {
     "timestamp_utc": "2026-11-09T19:00:00Z",
     "dalton_cfs": 406.0,
