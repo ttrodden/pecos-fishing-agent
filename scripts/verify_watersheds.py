@@ -21,7 +21,6 @@ def request_json(url, method="GET", payload=None):
             r = requests.request(method, url, json=payload, timeout=75,
                                  headers={"User-Agent": "pecos-watershed-research/1.1",
                                           "Accept": "application/geo+json, application/json"})
-            r.raise_for_status()
             if not r.ok:
                 print(f"  HTTP {r.status_code} response from {url}: {r.text[:2000]}", flush=True)
             r.raise_for_status()
