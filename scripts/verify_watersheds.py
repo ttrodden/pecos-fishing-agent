@@ -101,7 +101,7 @@ def main():
         except Exception as exc:
             errors["upper_pecos"] = str(exc)
             print(f"  Upper Pecos unavailable: {exc}", flush=True)
-        if args.rio_mora_outlet_lat is not None:
+    if args.rio_mora_outlet_lat is not None:
         print("Retrieving point-specific Rio Mora outlet basin", flush=True)
         url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
         try:
