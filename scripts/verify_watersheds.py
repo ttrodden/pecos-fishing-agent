@@ -89,8 +89,12 @@ def main():
         print("Retrieving point-specific upper Pecos basin", flush=True)
         url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
         try:
-            obj = request_json(url, "POST", {"inputs": {
-                "lat": args.upper_pecos_lat, "lon": args.upper_pecos_lon, "upstream": True}})
+            obj = request_json(url, "POST", {"inputs": [
+                {"id": "lat", "value": str(args.upper_pecos_lat), "type": "text/plain"},
+                {"id": "lon", "value": str(args.upper_pecos_lon), "type": "text/plain"},
+                {"id": "upstream", "value": "True", "type": "text/plain"},
+                {"id": "simplified", "value": "False", "type": "text/plain"}
+            ]})
             candidate = obj.get("drainageBasin") or obj.get("outputs", {}).get("drainageBasin")
             if not candidate:
                 raise ValueError("No drainageBasin in response; check service schema")
@@ -107,10 +111,12 @@ def main():
         print("Retrieving point-specific Rio Mora outlet basin", flush=True)
         url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
         try:
-            obj = request_json(url, "POST", {"inputs": {
-                "lat": args.rio_mora_outlet_lat,
-                "lon": args.rio_mora_outlet_lon,
-                "upstream": True}})
+            obj = request_json(url, "POST", {"inputs": [
+                {"id": "lat", "value": str(args.rio_mora_outlet_lat), "type": "text/plain"},
+                {"id": "lon", "value": str(args.rio_mora_outlet_lon), "type": "text/plain"},
+                {"id": "upstream", "value": "True", "type": "text/plain"},
+                {"id": "simplified", "value": "False", "type": "text/plain"}
+            ]})
             candidate = obj.get("drainageBasin") or obj.get("outputs", {}).get("drainageBasin")
             if not candidate:
                 raise ValueError("No drainageBasin in Rio Mora response; check service schema")
