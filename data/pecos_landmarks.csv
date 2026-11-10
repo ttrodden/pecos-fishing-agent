@@ -1,0 +1,19 @@
+id,name,latitude,longitude,category,notes
+the_y,The Y,35.7761000,-105.6601667,confluence,Pecos River and Rio Mora confluence
+upper_pecos_outlet,Upper Pecos watershed outlet,35.7765694,-105.6602806,watershed_outlet,Pecos channel approximately 100 feet above The Y
+rio_mora_outlet,Rio Mora watershed outlet,35.7763278,-105.6598278,watershed_outlet,Rio Mora channel approximately 100 feet above The Y
+rio_mora_gauge,Rio Mora USGS gauge,35.7767639,-105.6584417,gauge,USGS 08377900
+upper_y,Upper Y,35.7822861,-105.6597806,stocking_boundary,Lower boundary of Cowles Canyon
+lower_cowles_meadow,Lower Cowles Meadow,35.8060889,-105.6600444,stocking_boundary,Stocking resumes above Cowles Canyon
+upper_cowles_meadow,Upper Cowles Meadow,35.8079833,-105.6597000,stocking_boundary,Upper stocking boundary of Cowles Meadow
+lower_cowles_bridge,Lower Cowles Bridge,35.8101611,-105.6587111,stocking_boundary,Lower stocking boundary of Cowles Bridge reach
+winsor_creek,Winsor Creek confluence,35.8115667,-105.6589139,confluence,Tributary joins within Cowles Bridge reach
+cowles_bridge,Cowles Bridge crossing,35.8121889,-105.6593139,road_crossing,Parking on north and south sides
+upper_cowles_bridge,Upper Cowles Bridge,35.8143528,-105.6586528,stocking_boundary,Upper known stocking boundary of Pecos Canyon
+panchuela_creek,Panchuela Creek confluence,35.8217472,-105.6563583,confluence,Tributary joins below Jacks Creek
+jacks_creek,Jacks Creek confluence,35.8241167,-105.6551667,confluence,Also paved road crossing and productive runoff fishing area
+willow_creek,Willow Creek confluence,35.7580028,-105.6718750,confluence,Tributary joins below The Y
+upper_holy_ghost,Upper Holy Ghost Campground,35.7449639,-105.6754556,stocking_boundary,Upper stocking boundary also called Upper Terrero Campground
+lower_holy_ghost,Lower Holy Ghost Campground,35.7411861,-105.6784278,stocking_boundary,Lower stocking boundary and Holy Ghost Creek confluence
+dalton_gauge,Dalton USGS gauge,35.7105444,-105.6830083,gauge,USGS 08378500
+dalton_picnic,Dalton Picnic Area,35.6536417,-105.6847111,stocking_boundary,Lower boundary of Pecos Canyon stocking report region
