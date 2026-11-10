@@ -99,7 +99,7 @@ def main():
             errors["upper_pecos"] = str(exc)
             print(f"  Upper Pecos unavailable: {exc}", flush=True)
             
-     if all(n in basins for n in ("dalton", "rio_mora", "upper_pecos")):
+    if all(n in basins for n in ("dalton", "rio_mora", "upper_pecos")):
         geom = basins["dalton"].difference(
             unary_union([basins["rio_mora"], basins["upper_pecos"]]))
         if not geom.is_empty:
