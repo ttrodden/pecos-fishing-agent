@@ -55,10 +55,13 @@ def main():
     parser.add_argument("--out", default="watershed_results")
     parser.add_argument("--upper-pecos-lat", type=float)
     parser.add_argument("--upper-pecos-lon", type=float)
+    parser.add_argument("--rio-mora-outlet-lat", type=float)
+    parser.add_argument("--rio-mora-outlet-lon", type=float)
     args = parser.parse_args()
     if (args.upper_pecos_lat is None) != (args.upper_pecos_lon is None):
         parser.error("Provide both upper Pecos coordinates")
-
+    if (args.rio_mora_outlet_lat is None) != (args.rio_mora_outlet_lon is None):
+        parser.error("Provide both Rio Mora outlet coordinates")
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     basins, errors, methods = {}, {}, {}
@@ -98,13 +101,33 @@ def main():
         except Exception as exc:
             errors["upper_pecos"] = str(exc)
             print(f"  Upper Pecos unavailable: {exc}", flush=True)
-            
-    if all(n in basins for n in ("dalton", "rio_mora", "upper_pecos")):
+        if args.rio_mora_outlet_lat is not None:
+        print("Retrieving point-specific Rio Mora outlet basin", flush=True)
+        url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
+        try:
+            obj = request_json(url, "POST", {"inputs": {
+                "lat": args.rio_mora_outlet_lat,
+                "lon": args.rio_mora_outlet_lon,
+                "upstream": True}})
+            candidate = obj.get("drainageBasin") or obj.get("outputs", {}).get("drainageBasin")
+            if not candidate:
+                raise ValueError("No drainageBasin in Rio Mora response; check service schema")
+            geom = geometry_from_geojson(candidate)
+            if geom.is_empty:
+                raise ValueError("Empty Rio Mora outlet geometry")
+            basins["rio_mora_at_y"] = geom
+            methods["rio_mora_at_y"] = "NLDI point-specific split catchment"
+            save_basin(out, "rio_mora_at_y", geom)
+        except Exception as exc:
+            errors["rio_mora_at_y"] = str(exc)
+            print(f"  Rio Mora outlet unavailable: {exc}", flush=True)
+                  
+    if all(n in basins for n in ("dalton", "rio_mora_at_y", "upper_pecos")):
         geom = basins["dalton"].difference(
-            unary_union([basins["rio_mora"], basins["upper_pecos"]]))
+            unary_union([basins["rio_mora_at_y"], basins["upper_pecos"]]))
         if not geom.is_empty:
             basins["intervening_incremental"] = geom
-            methods["intervening_incremental"] = "Dalton minus Rio Mora and upper Pecos"
+            methods["intervening_incremental"] = "Dalton minus Rio Mora at The Y and upper Pecos at The Y"
             save_basin(out, "intervening_incremental", geom)
 
     names = list(basins)
