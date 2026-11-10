@@ -96,7 +96,11 @@ def main():
                 {"id": "simplified", "value": "False", "type": "text/plain"}
             ]})
             print(f"  Upper Pecos response: {str(obj)[:3000]}", flush=True)      
-            candidate = obj.get("drainageBasin") or obj.get("outputs", {}).get("drainageBasin")
+            candidate = next(
+                (feature["geometry"] for feature in obj.get("features", [])
+                 if feature.get("id") == "drainageBasin"),
+                None
+            )
             if not candidate:
                 raise ValueError("No drainageBasin in response; check service schema")
             geom = geometry_from_geojson(candidate)
@@ -119,7 +123,11 @@ def main():
                 {"id": "simplified", "value": "False", "type": "text/plain"}
             ]})
             print(f"  Rio Mora response: {str(obj)[:3000]}", flush=True)
-            candidate = obj.get("drainageBasin") or obj.get("outputs", {}).get("drainageBasin")
+            candidate = next(
+                (feature["geometry"] for feature in obj.get("features", [])
+                 if feature.get("id") == "drainageBasin"),
+                None
+            )
             if not candidate:
                 raise ValueError("No drainageBasin in Rio Mora response; check service schema")
             geom = geometry_from_geojson(candidate)
