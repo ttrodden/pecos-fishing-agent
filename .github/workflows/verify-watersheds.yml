@@ -27,7 +27,7 @@ jobs:
 
       - name: Verify watershed boundaries
         run: |
-          python scripts/verify_watersheds.py
+          python scripts/verify_watersheds.py --upper-pecos-lat 35.7765694 --upper-pecos-lon -105.6602806 --rio-mora-outlet-lat 35.7763278 --rio-mora-outlet-lon -105.6598278
 
       - name: Upload verification results
         if: always()
