@@ -22,6 +22,8 @@ def request_json(url, method="GET", payload=None):
                                  headers={"User-Agent": "pecos-watershed-research/1.1",
                                           "Accept": "application/geo+json, application/json"})
             r.raise_for_status()
+            if not r.ok:
+                print(f"  HTTP {r.status_code} response from {url}: {r.text[:2000]}", flush=True)
             return r.json()
         except (requests.RequestException, ValueError) as exc:
             last_error = exc
