@@ -24,6 +24,7 @@ def request_json(url, method="GET", payload=None):
             r.raise_for_status()
             if not r.ok:
                 print(f"  HTTP {r.status_code} response from {url}: {r.text[:2000]}", flush=True)
+            r.raise_for_status()
             return r.json()
         except (requests.RequestException, ValueError) as exc:
             last_error = exc
