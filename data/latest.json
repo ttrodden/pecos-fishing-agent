@@ -1,352 +1,16 @@
 {
   "source": "Official USGS instantaneous values",
-  "retrieved_at_utc": "2026-11-09T21:56:06.865776+00:00",
-  "latest_matched_at_utc": "2026-11-09T21:00:00Z",
-  "latest_matched_at_mountain": "2026-11-09T14:00:00-07:00",
-  "matched_age_minutes": 56.1,
+  "retrieved_at_utc": "2026-11-10T11:56:11.998154+00:00",
+  "latest_matched_at_utc": "2026-11-10T11:00:00Z",
+  "latest_matched_at_mountain": "2026-11-10T04:00:00-07:00",
+  "matched_age_minutes": 56.2,
   "latest": {
-    "timestamp_utc": "2026-11-09T21:00:00Z",
-    "dalton_cfs": 382.0,
-    "rio_mora_cfs": 90.4,
-    "cowles_estimated_cfs": 291.6
+    "timestamp_utc": "2026-11-10T11:00:00Z",
+    "dalton_cfs": 377.0,
+    "rio_mora_cfs": 85.2,
+    "cowles_estimated_cfs": 291.8
   },
   "matched_discharge": [
-    {
-      "timestamp_utc": "2026-11-02T22:00:00Z",
-      "dalton_cfs": 787.0,
-      "rio_mora_cfs": 271.0,
-      "cowles_estimated_cfs": 516.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T22:15:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 268.0,
-      "cowles_estimated_cfs": 500.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T22:30:00Z",
-      "dalton_cfs": 787.0,
-      "rio_mora_cfs": 268.0,
-      "cowles_estimated_cfs": 519.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T22:45:00Z",
-      "dalton_cfs": 780.0,
-      "rio_mora_cfs": 268.0,
-      "cowles_estimated_cfs": 512.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T23:00:00Z",
-      "dalton_cfs": 780.0,
-      "rio_mora_cfs": 268.0,
-      "cowles_estimated_cfs": 512.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T23:15:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 505.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T23:30:00Z",
-      "dalton_cfs": 787.0,
-      "rio_mora_cfs": 262.0,
-      "cowles_estimated_cfs": 525.0
-    },
-    {
-      "timestamp_utc": "2026-11-02T23:45:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 262.0,
-      "cowles_estimated_cfs": 506.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T00:00:00Z",
-      "dalton_cfs": 787.0,
-      "rio_mora_cfs": 262.0,
-      "cowles_estimated_cfs": 525.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T00:15:00Z",
-      "dalton_cfs": 795.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 536.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T00:30:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 265.0,
-      "cowles_estimated_cfs": 507.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T00:45:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 256.0,
-      "cowles_estimated_cfs": 508.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T01:00:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 513.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T01:15:00Z",
-      "dalton_cfs": 734.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 475.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T01:30:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 509.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T01:45:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 259.0,
-      "cowles_estimated_cfs": 509.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T02:00:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 256.0,
-      "cowles_estimated_cfs": 512.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T02:15:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 251.0,
-      "cowles_estimated_cfs": 521.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T02:30:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 253.0,
-      "cowles_estimated_cfs": 519.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T02:45:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 256.0,
-      "cowles_estimated_cfs": 516.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T03:00:00Z",
-      "dalton_cfs": 761.0,
-      "rio_mora_cfs": 253.0,
-      "cowles_estimated_cfs": 508.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T03:15:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 251.0,
-      "cowles_estimated_cfs": 513.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T03:30:00Z",
-      "dalton_cfs": 784.0,
-      "rio_mora_cfs": 253.0,
-      "cowles_estimated_cfs": 531.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T03:45:00Z",
-      "dalton_cfs": 761.0,
-      "rio_mora_cfs": 256.0,
-      "cowles_estimated_cfs": 505.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T04:00:00Z",
-      "dalton_cfs": 757.0,
-      "rio_mora_cfs": 251.0,
-      "cowles_estimated_cfs": 506.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T04:15:00Z",
-      "dalton_cfs": 745.0,
-      "rio_mora_cfs": 251.0,
-      "cowles_estimated_cfs": 494.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T04:30:00Z",
-      "dalton_cfs": 757.0,
-      "rio_mora_cfs": 251.0,
-      "cowles_estimated_cfs": 506.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T04:45:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 248.0,
-      "cowles_estimated_cfs": 520.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T05:00:00Z",
-      "dalton_cfs": 749.0,
-      "rio_mora_cfs": 237.0,
-      "cowles_estimated_cfs": 512.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T05:15:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 245.0,
-      "cowles_estimated_cfs": 523.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T05:30:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 245.0,
-      "cowles_estimated_cfs": 523.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T05:45:00Z",
-      "dalton_cfs": 776.0,
-      "rio_mora_cfs": 242.0,
-      "cowles_estimated_cfs": 534.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T06:00:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 525.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T06:15:00Z",
-      "dalton_cfs": 753.0,
-      "rio_mora_cfs": 242.0,
-      "cowles_estimated_cfs": 511.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T06:30:00Z",
-      "dalton_cfs": 741.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 502.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T06:45:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 242.0,
-      "cowles_estimated_cfs": 530.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T07:00:00Z",
-      "dalton_cfs": 745.0,
-      "rio_mora_cfs": 242.0,
-      "cowles_estimated_cfs": 503.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T07:15:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 237.0,
-      "cowles_estimated_cfs": 531.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T07:30:00Z",
-      "dalton_cfs": 761.0,
-      "rio_mora_cfs": 242.0,
-      "cowles_estimated_cfs": 519.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T07:45:00Z",
-      "dalton_cfs": 776.0,
-      "rio_mora_cfs": 237.0,
-      "cowles_estimated_cfs": 539.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T08:00:00Z",
-      "dalton_cfs": 791.0,
-      "rio_mora_cfs": 237.0,
-      "cowles_estimated_cfs": 554.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T08:15:00Z",
-      "dalton_cfs": 791.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 552.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T08:30:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 533.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T08:45:00Z",
-      "dalton_cfs": 776.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 537.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T09:00:00Z",
-      "dalton_cfs": 784.0,
-      "rio_mora_cfs": 237.0,
-      "cowles_estimated_cfs": 547.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T09:15:00Z",
-      "dalton_cfs": 772.0,
-      "rio_mora_cfs": 239.0,
-      "cowles_estimated_cfs": 533.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T09:30:00Z",
-      "dalton_cfs": 757.0,
-      "rio_mora_cfs": 234.0,
-      "cowles_estimated_cfs": 523.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T09:45:00Z",
-      "dalton_cfs": 761.0,
-      "rio_mora_cfs": 234.0,
-      "cowles_estimated_cfs": 527.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T10:00:00Z",
-      "dalton_cfs": 768.0,
-      "rio_mora_cfs": 231.0,
-      "cowles_estimated_cfs": 537.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T10:15:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 231.0,
-      "cowles_estimated_cfs": 533.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T10:30:00Z",
-      "dalton_cfs": 761.0,
-      "rio_mora_cfs": 234.0,
-      "cowles_estimated_cfs": 527.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T10:45:00Z",
-      "dalton_cfs": 738.0,
-      "rio_mora_cfs": 234.0,
-      "cowles_estimated_cfs": 504.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T11:00:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 226.0,
-      "cowles_estimated_cfs": 538.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T11:15:00Z",
-      "dalton_cfs": 787.0,
-      "rio_mora_cfs": 231.0,
-      "cowles_estimated_cfs": 556.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T11:30:00Z",
-      "dalton_cfs": 784.0,
-      "rio_mora_cfs": 231.0,
-      "cowles_estimated_cfs": 553.0
-    },
-    {
-      "timestamp_utc": "2026-11-03T11:45:00Z",
-      "dalton_cfs": 764.0,
-      "rio_mora_cfs": 223.0,
-      "cowles_estimated_cfs": 541.0
-    },
     {
       "timestamp_utc": "2026-11-03T12:00:00Z",
       "dalton_cfs": 757.0,
@@ -4024,6 +3688,342 @@
       "dalton_cfs": 382.0,
       "rio_mora_cfs": 90.4,
       "cowles_estimated_cfs": 291.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T21:15:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 301.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T21:30:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 291.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T21:45:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 297.9
+    },
+    {
+      "timestamp_utc": "2026-11-09T22:00:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 297.9
+    },
+    {
+      "timestamp_utc": "2026-11-09T22:15:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 287.9
+    },
+    {
+      "timestamp_utc": "2026-11-09T22:30:00Z",
+      "dalton_cfs": 401.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 311.9
+    },
+    {
+      "timestamp_utc": "2026-11-09T22:45:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 291.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T23:00:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 296.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T23:15:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 291.6
+    },
+    {
+      "timestamp_utc": "2026-11-09T23:30:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 297.9
+    },
+    {
+      "timestamp_utc": "2026-11-09T23:45:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 296.6
+    },
+    {
+      "timestamp_utc": "2026-11-10T00:00:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T00:15:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 302.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T00:30:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T00:45:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T01:00:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 302.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T01:15:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 296.6
+    },
+    {
+      "timestamp_utc": "2026-11-10T01:30:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 301.6
+    },
+    {
+      "timestamp_utc": "2026-11-10T01:45:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T02:00:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 289.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T02:15:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T02:30:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 90.4,
+      "cowles_estimated_cfs": 301.6
+    },
+    {
+      "timestamp_utc": "2026-11-10T02:45:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 297.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T03:00:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 297.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T03:15:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 287.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T03:30:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 292.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T03:45:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 302.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T04:00:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 287.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T04:15:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 289.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T04:30:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 289.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T04:45:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 89.1,
+      "cowles_estimated_cfs": 287.9
+    },
+    {
+      "timestamp_utc": "2026-11-10T05:00:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 304.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T05:15:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 294.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T05:30:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 289.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T05:45:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 294.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T06:00:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 304.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T06:15:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 304.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T06:30:00Z",
+      "dalton_cfs": 396.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 308.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T06:45:00Z",
+      "dalton_cfs": 392.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 304.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T07:00:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 295.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T07:15:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 87.8,
+      "cowles_estimated_cfs": 294.2
+    },
+    {
+      "timestamp_utc": "2026-11-10T07:30:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 290.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T07:45:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 300.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T08:00:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 300.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T08:15:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 290.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T08:30:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 290.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T08:45:00Z",
+      "dalton_cfs": 382.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 295.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T09:00:00Z",
+      "dalton_cfs": 373.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 286.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T09:15:00Z",
+      "dalton_cfs": 363.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 276.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T09:30:00Z",
+      "dalton_cfs": 387.0,
+      "rio_mora_cfs": 85.2,
+      "cowles_estimated_cfs": 301.8
+    },
+    {
+      "timestamp_utc": "2026-11-10T09:45:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 290.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T10:00:00Z",
+      "dalton_cfs": 368.0,
+      "rio_mora_cfs": 86.5,
+      "cowles_estimated_cfs": 281.5
+    },
+    {
+      "timestamp_utc": "2026-11-10T10:15:00Z",
+      "dalton_cfs": 373.0,
+      "rio_mora_cfs": 85.2,
+      "cowles_estimated_cfs": 287.8
+    },
+    {
+      "timestamp_utc": "2026-11-10T10:30:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 85.2,
+      "cowles_estimated_cfs": 291.8
+    },
+    {
+      "timestamp_utc": "2026-11-10T10:45:00Z",
+      "dalton_cfs": 373.0,
+      "rio_mora_cfs": 85.2,
+      "cowles_estimated_cfs": 287.8
+    },
+    {
+      "timestamp_utc": "2026-11-10T11:00:00Z",
+      "dalton_cfs": 377.0,
+      "rio_mora_cfs": 85.2,
+      "cowles_estimated_cfs": 291.8
     }
   ],
   "station_ids": {
