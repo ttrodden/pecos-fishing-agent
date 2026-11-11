@@ -87,18 +87,13 @@ def main():
 
     if args.upper_pecos_lat is not None:
         print("Retrieving point-specific upper Pecos basin", flush=True)
-        url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
+        url = f"{BASE}/linked-data/comid/20814402/basin?f=json"
         try:
-            obj = request_json(url, "POST", {"inputs": [
-                {"id": "lat", "value": str(args.upper_pecos_lat), "type": "text/plain"},
-                {"id": "lon", "value": str(args.upper_pecos_lon), "type": "text/plain"},
-                {"id": "upstream", "value": "True", "type": "text/plain"},
-                {"id": "simplified", "value": "False", "type": "text/plain"}
-            ]})
-            print(f"  Upper Pecos response: {str(obj)[:3000]}", flush=True)      
+            obj = request_json(url, "GET")
+            print(f"  Upper Pecos response: {str(obj)[:3000]}", flush=True)
             candidate = next(
                 (feature["geometry"] for feature in obj.get("features", [])
-                 if feature.get("id") == "drainageBasin"),
+                 if feature.get("geometry", {}).get("type") in ("Polygon", "MultiPolygon")),
                 None
             )
             if not candidate:
@@ -107,25 +102,20 @@ def main():
             if geom.is_empty:
                 raise ValueError("Empty upper Pecos geometry")
             basins["upper_pecos"] = geom
-            methods["upper_pecos"] = "NLDI point-specific split catchment"
+            methods["upper_pecos"] = "NLDI direct COMID basin 20814402"
             save_basin(out, "upper_pecos", geom)
         except Exception as exc:
             errors["upper_pecos"] = str(exc)
             print(f"  Upper Pecos unavailable: {exc}", flush=True)
     if args.rio_mora_outlet_lat is not None:
         print("Retrieving point-specific Rio Mora outlet basin", flush=True)
-        url = f"{BASE}/pygeoapi/processes/nldi-splitcatchment/execution?f=json"
+        url = f"{BASE}/linked-data/comid/20815146/basin?f=json"
         try:
-            obj = request_json(url, "POST", {"inputs": [
-                {"id": "lat", "value": str(args.rio_mora_outlet_lat), "type": "text/plain"},
-                {"id": "lon", "value": str(args.rio_mora_outlet_lon), "type": "text/plain"},
-                {"id": "upstream", "value": "True", "type": "text/plain"},
-                {"id": "simplified", "value": "False", "type": "text/plain"}
-            ]})
+            obj = request_json(url, "GET")
             print(f"  Rio Mora response: {str(obj)[:3000]}", flush=True)
             candidate = next(
                 (feature["geometry"] for feature in obj.get("features", [])
-                 if feature.get("id") == "drainageBasin"),
+                 if feature.get("geometry", {}).get("type") in ("Polygon", "MultiPolygon")),
                 None
             )
             if not candidate:
@@ -134,7 +124,7 @@ def main():
             if geom.is_empty:
                 raise ValueError("Empty Rio Mora outlet geometry")
             basins["rio_mora_at_y"] = geom
-            methods["rio_mora_at_y"] = "NLDI point-specific split catchment"
+            methods["rio_mora_at_y"] = "NLDI direct COMID basin 20815146"
             save_basin(out, "rio_mora_at_y", geom)
         except Exception as exc:
             errors["rio_mora_at_y"] = str(exc)
