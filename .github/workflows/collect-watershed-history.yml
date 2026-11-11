@@ -13,10 +13,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Download historical river and weather records
-        run: python scripts/collect_history.py --start 2022-01-01 --end 2025-12-31 --out research_data
+        run: python scripts/collect_history.py --start 2026-10-01 --end 2026-11-10 --out research_data
       - name: Upload research files for analysis
         uses: actions/upload-artifact@v4
         with:
-          name: pecos-watershed-history-2022-2025
+          name: pecos-watershed-history-oct-nov-2026
           path: research_data/
           retention-days: 30
