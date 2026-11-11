@@ -1,0 +1,33 @@
+name: Test Pecos Flow Backtest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run historical backtest
+        run: python scripts/backtest_flow.py
+
+      - name: Display backtest results
+        run: cat data/backtest_results.csv
+
+      - name: Save backtest results
+        uses: actions/upload-artifact@v4
+        with:
+          name: pecos-flow-backtest
+          path: data/backtest_results.csv
+          retention-days: 30
