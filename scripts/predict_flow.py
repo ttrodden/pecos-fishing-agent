@@ -59,7 +59,20 @@ def main():
     if len(rates) < 12:
         raise RuntimeError("Insufficient consecutive flow observations.")
 
-    hourly_rate = median(rates)
+    # Estimate the overall trend using the first and last
+    # six hourly observations, reducing sensitivity to
+    # repeated identical measurements.
+    first_flow = median(q for t, q in points[:6])
+    last_flow = median(q for t, q in points[-6:])
+
+    elapsed_hours = (
+        points[-1][0] - points[0][0]
+    ).total_seconds() / 3600
+
+    if elapsed_hours <= 0:
+        raise RuntimeError("Invalid observation time span.")
+
+    hourly_rate = math.log(last_flow / first_flow) / elapsed_hours
 
     # Detect significant recent rises.
     last_24h = [
