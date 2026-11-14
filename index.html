@@ -43,6 +43,47 @@ function model(rows){
  }
  return {out,slope,r1,r2,r7,conflict};
 }
+function validateForecastAnchor(rows, forecast) {
+  if (!Array.isArray(rows) || rows.length === 0) {
+    throw new Error('No observations available');
+  }
+
+  if (!Array.isArray(forecast) || forecast.length === 0) {
+    throw new Error('No forecast available');
+  }
+
+  const observed = rows.at(-1);
+  const predicted = forecast[0];
+
+  if (!Number.isFinite(observed.t) ||
+      !Number.isFinite(observed.y) ||
+      observed.y < 0) {
+    throw new Error('Invalid latest observation');
+  }
+
+  if (predicted.t !== observed.t ||
+      predicted.y !== observed.y ||
+      predicted.lo !== observed.y ||
+      predicted.hi !== observed.y) {
+    throw new Error(
+      'Forecast does not start at the latest observation'
+    );
+  }
+
+  for (const point of forecast) {
+    if (!Number.isFinite(point.t) ||
+        !Number.isFinite(point.y) ||
+        !Number.isFinite(point.lo) ||
+        !Number.isFinite(point.hi) ||
+        point.lo < 0 ||
+        point.lo > point.y ||
+        point.y > point.hi) {
+      throw new Error('Invalid forecast uncertainty range');
+    }
+  }
+
+  return true;
+} 
 function draw(){const canvas=$('chart'),rect=canvas.getBoundingClientRect();if(!rect.width||!history.length)return;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(rect.width*dpr);canvas.height=Math.round(rect.height*dpr);const c=canvas.getContext('2d');c.scale(dpr,dpr);const w=rect.width,h=rect.height,p={l:58,r:15,t:22,b:48};const left=last.t-7*DAY,right=last.t+7*DAY;const vals=[...history.map(x=>x.y),...future.flatMap(x=>[x.lo,x.hi]),...Object.values(thresholds).filter(Number.isFinite)];const ymax=Math.max(10,...vals)*1.1;const x=t=>p.l+(t-left)/(right-left)*(w-p.l-p.r),y=v=>h-p.b-v/ymax*(h-p.t-p.b);c.clearRect(0,0,w,h);c.font='12px system-ui';c.lineWidth=1;c.textAlign='right';for(let i=0;i<=5;i++){let v=ymax*i/5,yy=y(v);c.strokeStyle='#e1e9ec';c.beginPath();c.moveTo(p.l,yy);c.lineTo(w-p.r,yy);c.stroke();c.fillStyle='#5a707c';c.fillText(fmt(v,0),p.l-9,yy+4)}c.textAlign='center';for(let i=0;i<=14;i+=2){let t=left+i*DAY,xx=x(t);c.fillStyle='#607780';c.fillText(date(t),xx,h-22)}
  c.fillStyle='#f7f0e5';c.fillRect(x(last.t),p.t,w-p.r-x(last.t),h-p.b-p.t);
  if(Number.isFinite(thresholds.min)&&Number.isFinite(thresholds.max)){c.fillStyle='rgba(38,129,75,0.14)';c.fillRect(p.l,y(thresholds.max),w-p.l-p.r,y(thresholds.min)-y(thresholds.max));}
