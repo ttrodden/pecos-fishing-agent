@@ -91,6 +91,26 @@ function draw(){const canvas=$('chart'),rect=canvas.getBoundingClientRect();if(!
  if(future.length){c.beginPath();future.forEach((v,i)=>i?c.lineTo(x(v.t),y(v.hi)):c.moveTo(x(v.t),y(v.hi)));[...future].reverse().forEach(v=>c.lineTo(x(v.t),y(v.lo)));c.closePath();c.fillStyle='#d9e8e9';c.fill();path(future,'y','#c17722',2.6,[8,5]);}
  path(history.filter(v=>v.t>=left),'y','#087c90',2.6);
  for(const [name,v] of Object.entries(thresholds)){if(!Number.isFinite(v))continue;c.beginPath();c.moveTo(p.l,y(v));c.lineTo(w-p.r,y(v));c.strokeStyle=name==='min'?'#26814b':'#b05e48';c.lineWidth=1.5;c.setLineDash([6,5]);c.stroke();c.setLineDash([]);c.fillStyle=c.strokeStyle;c.textAlign='left';c.fillText(`${name==='min'?'Min':'Max'} ${fmt(v,0)}`,p.l+5,y(v)-5)}
+ // Draw the observation/forecast boundary.
+ c.beginPath();
+ c.moveTo(x(last.t),p.t);
+ c.lineTo(x(last.t),h-p.b);
+ c.strokeStyle='#667a83';
+ c.lineWidth=1.5;
+ c.setLineDash([3,4]);
+ c.stroke();
+ c.setLineDash([]);
+ c.textAlign='center';
+ c.fillStyle='#405c67';
+ c.fillText('NOW',x(last.t),p.t-7);
+
+ // Mark the latest observed discharge.
+ const anchorX=x(last.t);
+ const anchorY=y(last.y);
+
+ c.beginPath();
+ c.arc(anchorX,anchorY,5,0,Math.PI*2);
+ c.fillStyle='#087c90';
  c.fill();
  c.strokeStyle='#ffffff';
  c.lineWidth=2;
