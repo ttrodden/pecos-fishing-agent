@@ -1,0 +1,36 @@
+name: Collect Pecos native-resolution historical flow
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: First date (Mountain local, YYYY-MM-DD)
+        required: true
+        default: '2026-11-01'
+      end_date:
+        description: Last date (Mountain local, YYYY-MM-DD)
+        required: true
+        default: '2026-11-10'
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify collector offline
+        run: python -m unittest discover -s scripts -p test_collector.py -v
+      - name: Retrieve original USGS observations
+        env:
+          START_DATE: ${{ inputs.start_date }}
+          END_DATE: ${{ inputs.end_date }}
+        run: python scripts/collect_history_instantaneous.py --start "$START_DATE" --end "$END_DATE" --out pecos_instantaneous_history
+      - name: Upload research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pecos-usgs-native-flow-${{ inputs.start_date }}-to-${{ inputs.end_date }}
+          path: pecos_instantaneous_history/
+          retention-days: 90
